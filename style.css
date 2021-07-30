@@ -6,3 +6,83 @@ body{
 	background-image: url("img/triangular_@2X.png");
 	font-size: 20px;
 }
+#top{
+	font-family: 'Pacifico', cursive;
+	margin-top: 50px;
+	color: #42d4f9;
+	font-size: 68px;
+	font-weight: 700;
+	text-align: center;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 2px;
+		text-shadow: 
+		3px 3px 0 #acb0b0, 
+		-3px 3px 0 #acb0b0, 
+		-3px -3px 0 #acb0b0, 
+		3px -3px 0 #acb0b0; 
+}
+#container{
+	background-color: gray;
+	width: 300px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	border-radius: 10px;
+-webkit-box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64); 
+box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
+	opacity: 0.7;
+}
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	margin-top: 5px;
+	text-align: center;
+	color: white;
+}
+input[type=text], 
+input[type=password],
+input[type=email]{
+	width: 300px;
+	background-color: #efefef;
+	color: #666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+input[type=text]:focus, 
+input[type=password]:focus,
+input[type=email]:focus{
+	box-shadow: 0px 0px 10px 2px rgba(89,89,89,0.9);
+	border: 2px solid #baffff;
+	background-color: #d9fff;
+	color: #428c42;
+}
+input[type=submit]{
+	width: 300px;
+	background-color: #42d4f9;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+	margin-top: 20px;
+}
+#info{
+	color: gray;
+	margin-top: 100px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
