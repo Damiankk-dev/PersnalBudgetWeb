@@ -99,6 +99,31 @@ input[type=email]:focus{
 #topnav{
 	background-color: #42d4f9;
 	text-align: center;
+	position: relative;
+}
+.test{
+	left:300px;
+	position: absolute;	
+	background-color: black;
+	height: 100px;
+	width: 100px;
+}
+#popup{
+  display:none;
+  position: absolute;
+  left:50%; /* 220/2+25 */
+  top: 200%;
+  box-shadow:0 3px 3px -2px #024;
+  z-index: 120;
+	background-color: gray;
+	width: 300px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border-radius: 10px;
+-webkit-box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64); 
+box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 }
 .menu{
 	list-style-type: none;
@@ -109,6 +134,7 @@ input[type=email]:focus{
 	font-weight: 700;
 	
 	text-transform: uppercase;
+	height: 40px;
 	
 }
 .menu > li {
@@ -131,6 +157,40 @@ input[type=email]:focus{
 }
 .menu a:hover{
 	color: #12979e;
+}
+.menu>li>ol{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+.menu>li>ol>li{
+	background-color: #baffff;
+	z-index: 100;
+	border-top: 1px dashed #751b1b;
+	position: relative;
+}
+.menu>li:hover>ol{
+	display: block;
+}
+.lastElement{
+	position: relative;
+}
+.popupi{
+	position: absolute;
+	width: 300px;
+	padding: 30px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgray;
+	left: 10px;
+	z-index: 100;
+}
+.popupElement{
+	float: left;
+	margin: 1px;
 }
 #quote{
 	margin-top: 60px;
@@ -234,45 +294,4 @@ select:focus{
 }
 label{
 	margin-top: 5px;
-}
-ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	font-size: 18px;
-	height: 40px;
-	display: inline-block;
-}
-ul>li>ol{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li{
-	background-color: #baffff;
-	position: relative;
-	z-index: 100;
-	border-top: 1px dashed #751b1b;
-}
-ul>li:hover>ol{
-	display: block;
-}
-ul>li>ol>li>ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li>ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li:hover>ul{
-	display: inline-block;
 }
