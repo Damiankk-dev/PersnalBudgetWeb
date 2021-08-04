@@ -9,7 +9,7 @@ body{
 }
 h1.logo{
 	font-family: 'Pacifico', cursive;
-	margin-top: 50px;
+	margin-top: 30px;
 	color: #42d4f9;
 	font-size: 68px;
 	font-weight: 700;
@@ -99,38 +99,84 @@ input[type=email]:focus{
 #topnav{
 	background-color: #42d4f9;
 	text-align: center;
+	position: relative;
+}
+#popup{
+  display:none;
+  position: absolute;
+  box-shadow:0 3px 3px -2px #024;
+  z-index: 120;
+	background-color: gray;
+	width: 300px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border-radius: 10px;
+-webkit-box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64); 
+box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 }
 .menu{
-	list-style-type: none;
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
 	margin: 0;
-	padding: 5px;
-	font-weight: 700;
-	
-	text-transform: uppercase;
-	
-}
-.menu > li {
-	display: inline-block;
-	padding-left: 20px;
-	padding-right: 20px;
-	border-right: 1px dashed gray;
-	border-left: 1px dashed gray;
-	max-width: 95px;
-	min-height: 40px;
-	vertical-align: text-top;
-}
-.menu > li:first-child{
-	border-left: 1px dashed gray;
+	padding: 0;
+	list-style-type: none;
+	font-size: 18px;
+	min-height: 35px;
+	display: inline-block;	
 }
 .menu a{
 	color: #484a4a;
 	text-decoration: none;
 	display: block;
+	height: 40px;
 }
 .menu a:hover{
 	color: #12979e;
+}
+.menu > li {
+	float: left;
+	width: 150px;
+	height: 40px;
+	border-right: 1px dashed gray;
+	text-transform: uppercase;
+}
+.menu > li:first-child{
+	border-left: 1px dashed gray;
+}
+.menu>li>ol{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+.menu>li>ol>li{
+	background-color: #baffff;
+	z-index: 100;
+	border-top: 1px dashed #751b1b;
+	position: relative;
+}
+.menu>li:hover>ol{
+	display: block;
+}
+.lastElement{
+	position: relative;
+}
+.popupi{
+	position: absolute;
+	width: 300px;
+	padding: 30px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgray;
+	left: 10px;
+	z-index: 100;
+}
+.popupElement{
+	float: left;
+	margin: 1px;
 }
 #quote{
 	margin-top: 60px;
@@ -152,8 +198,7 @@ box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 	margin-top: 50px;
 	text-align: right;
 	color: white;
-	font-style: italic;
-  
+	font-style: italic;  
 }
 #inputForm{
 	background-color: gray;
@@ -161,7 +206,7 @@ box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 	padding: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
+	margin-top: 50px;
 	border-radius: 10px;
 -webkit-box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64); 
 box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
@@ -173,7 +218,6 @@ box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 	font-size: 20px;
 	color: white;
 	padding: 15px 10px;
-	margin-top: 10px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -192,8 +236,9 @@ box-shadow: 6px 6px 30px 18px rgba(89,89,89,0.64);
 }
 
 h1.mainHeader{
+	
 	font-family: 'Lato', cursive;
-	margin-top: 50px;
+	margin-top: 30px;
 	color: gray;
 	font-size: 24px;
 	font-weight: 700;
@@ -203,8 +248,8 @@ h1.mainHeader{
 	margin-right: auto;
 	background-color: lightgray;
 	padding: 10px;
+	border-radius: 10px;
 }
-
 input[type=number],
 input[type=date],
 select{
@@ -218,8 +263,7 @@ select{
 	box-sizing: border-box;
 	outline: none;
 	margin-left: auto;
-	margin-right: auto;
-	
+	margin-right: auto;	
 }
 input[type=number]:focus, 
 input[type=date]:focus,
@@ -234,45 +278,4 @@ select:focus{
 }
 label{
 	margin-top: 5px;
-}
-ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	font-size: 18px;
-	height: 40px;
-	display: inline-block;
-}
-ul>li>ol{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li{
-	background-color: #baffff;
-	position: relative;
-	z-index: 100;
-	border-top: 1px dashed #751b1b;
-}
-ul>li:hover>ol{
-	display: block;
-}
-ul>li>ol>li>ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li>ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-ul>li>ol>li:hover>ul{
-	display: inline-block;
 }

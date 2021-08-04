@@ -13,6 +13,10 @@
 		
 	<link rel="stylesheet" href="style.css" type="text/css" >
 	
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="balancePopup.js"></script>
+	
+	
 </head>
 
 
@@ -29,24 +33,22 @@
 					<li><a href="#">Bieżący meisiąc</a></li>
 					<li><a href="#">Bieżący meisiąc</a></li>
 					<li><a href="#">Bieżący rok</a></li>
-					<li><a href="#">Zdefiniuj</a>
-						<ul class="dateDef">
-							<li>
-								<div id="definedRow">
-									<input class="formButton" type="date">
-									<input class="formButton" type="date">
-									<input class="formButton" type="submit" value="Dodaj">
-									<input class="formButton" type="reset" value="Anuluj">
-								</div>
-							</li>
-						</ul>
-						
-					</li>
+					<li><a href="#" onclick="showPopup()"><div class="pop">Zdefiniuj okres</div></a></li>
 				</ol>
 			</li>
 			<li><a href ="#">Ustawienia</a><br></li>
 			<li><a href ="#">Wyloguj się</a></li>
 		</ul>
+	<div id="popup">
+		<div class="inputForm">
+			<div class="row"><span style="color:white">Zdefiniuj okres:</span></div>
+			<div><input class="formButton" type="date"></div>
+			<div><input class="formButton" type="date"></div>
+			<div class="popupElement"><input class="formButton" id="confirmBtn" type="submit" value="Dodaj"></div>
+			<div class="popupElement"><input class="formButton" id="cancelBtn" type="reset" value="Anuluj"></div>
+			<div style="clear:both"></div>
+		</div> 
+	</div>
 	</nav>
 	</header>
 	<main>
@@ -94,28 +96,6 @@
 				<option value="16" name="expense"> Darowizna</option>
 				<option value="17" name="expense"> Inne...</option>
 			</select></br>
-			<!--
-			<fieldset>
-				<legend> Wybierz kategorię: </legend>
-				<div><label><input type="radio" value="1" name="expense" checked> Jedzenie</label></div>
-				<div><label><input type="radio" value="2" name="expense"> Mieszkanie</label></div>
-				<div><label><input type="radio" value="3" name="expense"> Transport</label></div>
-				<div><label><input type="radio" value="4" name="expense"> Telekomunikacja</label></div>
-				<div><label><input type="radio" value="5" name="expense"> Opieka zdrowotna</label></div>
-				<div><label><input type="radio" value="6" name="expense"> Ubranie</label></div>
-				<div><label><input type="radio" value="7" name="expense"> Higiena</label></div>
-				<div><label><input type="radio" value="8" name="expense"> Dzieci</label></div>
-				<div><label><input type="radio" value="9" name="expense"> Rozrywka</label></div>
-				<div><label><input type="radio" value="10" name="expense"> Wycieczka</label></div>
-				<div><label><input type="radio" value="11" name="expense"> Szkolenia</label></div>
-				<div><label><input type="radio" value="12" name="expense"> Książki</label></div>
-				<div><label><input type="radio" value="13" name="expense"> Oszczędności</label></div>
-				<div><label><input type="radio" value="14" name="expense"> Emerytura</label></div>
-				<div><label><input type="radio" value="15" name="expense"> Długi</label></div>
-				<div><label><input type="radio" value="16" name="expense"> Darowizna</label></div>
-				<div><label><input type="radio" value="17" name="expense"> Inne...</label></div>
-			</fieldset>
-			-->
 			<div class="row">
 				<input class="formButton" type="submit" value="Dodaj">
 				<input class="formButton" type="reset" value="Anuluj">
@@ -123,6 +103,7 @@
 			</div>
 		</div>
 	</main>
+
 	<footer>
 		<div id="info">
 		Dla solidnego zapanowania nad finansami &copy Damian Kaczmarzyk 2021
